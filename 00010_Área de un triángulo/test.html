@@ -1,0 +1,31 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 4 y 6 muestra El resultado del área del triángulo con base 4 y altura 6 es: 12", function() {
+
+_stubPromptResponse_(4);
+_stubPromptResponse_(6);
+
+_resetDocument_();
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('4','Falta agregar la base al alert')
+    alert.should.have.string('6','Falta agregar la altura al alert')
+    alert.should.have.string('12','Falta agregar el resultado al alert o el resultado es incorrecto')
+});
+
+it("si ingresamos 8 y 4 muestra El resultado del área del triángulo con base 8 y altura 4 es: 16", function() {
+
+_stubPromptResponse_(8);
+_stubPromptResponse_(4);
+
+
+_resetDocument_();
+
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('8','Falta agregar la base al alert')
+    alert.should.have.string('4','Falta agregar la altura al alert')
+    alert.should.have.string('16','Falta agregar el resultado al alert o el resultado es incorrecto')
+
+});/*#tests>*/

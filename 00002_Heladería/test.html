@@ -1,0 +1,38 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+  _resetUserInteractions_();
+})
+
+it("si ingresamos americana, chocolate y frutilla, muestra Aquí tiene su helado de americana, chocolate y frutilla", function() {
+  
+  _stubPromptResponse_('americana');
+  _stubPromptResponse_('chocolate');
+  _stubPromptResponse_('frutilla');
+  
+
+  _resetDocument_();
+
+   const alert = _shiftAlertMessage_();
+    alert.should.have.string('americana','Falta agregar el primer gusto al alert');
+    alert.should.have.string('chocolate','Falta agregar el segundo gusto al alert');
+    alert.should.have.string('frutilla','Falta agregar el tercer gusto al alert');
+
+});
+
+it("si ingresamos tramontana, dulce de leche y pistacho, muestra Aquí tiene su helado de tramontana, dulce de leche y pistacho", function() {
+  
+  _stubPromptResponse_('tramontana');
+  _stubPromptResponse_('dulce de leche');
+  _stubPromptResponse_('pistacho');
+  
+
+  _resetDocument_();
+
+
+  const alert = _shiftAlertMessage_();
+    alert.should.have.string('tramontana','Falta agregar el primer gusto al alert');
+    alert.should.have.string('dulce de leche','Falta agregar el segundo gusto al alert');
+    alert.should.have.string('pistacho','Falta agregar el tercer gusto al alert');
+
+});
+/*#tests>*/

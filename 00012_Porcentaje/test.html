@@ -1,0 +1,33 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 500 y 25 muestra `El porcentaje 25 del número 500 es: 125` ", function() {
+
+_stubPromptResponse_(500);
+_stubPromptResponse_(25);
+
+_resetDocument_();
+
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('500','Falta agregar el número al alert');
+    alert.should.have.string('25','Falta agregar el porcentaje al alert');
+    alert.should.have.string('125','Falta agregar el resultado al alert o el resultado es incorrecto');
+
+});
+
+it("si ingresamos 88 y 4 muestra `El porcentaje 4 del número 88 es: 3.52`", function() {
+
+_stubPromptResponse_(88);
+_stubPromptResponse_(4);
+
+
+_resetDocument_();
+
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('88','Falta agregar el número al alert')
+    alert.should.have.string('4','Falta agregar el porcentaje al alert')
+    alert.should.have.string('3.52','Falta agregar el resultado al alert o el resultado es incorrecto')
+
+});/*#tests>*/

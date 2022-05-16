@@ -1,0 +1,30 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 2, muestra El resultado de la conversión de 2 minutos a segundos es: 120", function() {
+
+_stubPromptResponse_(2);
+
+
+_resetDocument_();
+
+  const alert = _shiftAlertMessage_();
+    alert.should.have.string('2','Falta agregar el nombre al alert')
+    alert.should.have.string('120','Falta agregar el resultado al alert o el resultado es incorrecto')
+
+});
+
+it("si ingresamos 4, muestra El resultado de la conversión de 4 minutos a segundos es: 240", function() {
+
+_stubPromptResponse_(4);
+
+
+_resetDocument_();
+
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('4','Falta agregar el nombre al alert')
+    alert.should.have.string('240','Falta agregar el resultado al alert o el resultado es incorrecto')
+
+});/*#tests>*/

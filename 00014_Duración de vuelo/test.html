@@ -1,0 +1,38 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos Tulum 14, Turquía 20 y Egipto 4 muestra `La duración total del vuelo con escala en Tulum de duración 14 hs, Turquía de duración 20 hs y Egipto de duración 4 hs es: 38 hs` ", function() {
+
+_stubPromptResponse_('Tulum');
+_stubPromptResponse_(14);
+_stubPromptResponse_('Turquía');
+_stubPromptResponse_(20);
+_stubPromptResponse_('Egipto');
+_stubPromptResponse_(4);
+
+_resetDocument_();
+
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('Tulum','Falta agregar la primer escala al alert');
+    alert.should.have.string('14','Falta agregar la duración de la primer escala al alert');
+    alert.should.have.string('Turquía','Falta agregar la segunda escala al alert');
+    alert.should.have.string('20','Falta agregar la duración de la segunda escala al alert');
+    alert.should.have.string('Egipto','Falta agregar la tercer escala al alert');
+    alert.should.have.string('4','Falta agregar la duración de la tercer escala al alert');
+     
+});
+
+/*it("si ingresamos 50 muestra `Para la distancia 50 km en bicicleta el tiempo de viaje es 5 hora/s, a pie 10 hora/s y en auto 1 hora/s`", function() {
+
+_stubPromptResponse_(50);
+
+
+_resetDocument_();
+
+"Ingrese la distancia de su recorrido".should.eql(_shiftPromptMessage_(), 'Debería pedir una distancia');
+
+'Para la distancia 50 km en bicicleta el tiempo de viaje es 5 hora/s, a pie 10 hora/s y en auto 1 hora/s'.should.eql(_shiftAlertMessage_())
+
+});*//*#tests>*/

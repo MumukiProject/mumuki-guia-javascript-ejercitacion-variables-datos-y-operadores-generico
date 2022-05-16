@@ -1,0 +1,31 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 5, 5, 3, muestra El hotel tiene una capacidad de 37 personas", function() {
+
+_stubPromptResponse_(5)
+_stubPromptResponse_(5)
+_stubPromptResponse_(3)
+
+
+_resetDocument_();
+
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('37','Falta agregar resultado al alert o el resultado no es correcto');
+});
+
+it("si ingresamos 15, 20, 12, muestra El hotel tiene una capacidad de 138 personas", function() {
+
+_stubPromptResponse_(15)
+_stubPromptResponse_(20)
+_stubPromptResponse_(12)
+
+
+_resetDocument_();
+
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('138','Falta agregar resultado al alert o el resultado no es correcto');
+
+});/*#tests>*/

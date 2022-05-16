@@ -1,0 +1,47 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+  _resetUserInteractions_();
+})
+
+it("si ingresamos Calle Falsa, 123, 1, 24072, Springfield, EE. UU. muestra La dirección que ha ingresado es: Calle Falsa 123 1, 24072, Springfield, EE. UU. ", function() {
+  
+  _stubPromptResponse_('Calle Falsa');
+  _stubPromptResponse_(123);
+  _stubPromptResponse_(1);
+  _stubPromptResponse_(24072);
+  _stubPromptResponse_('Springfield');
+  _stubPromptResponse_('EE. UU.');
+  
+
+  _resetDocument_();
+  
+   const alert = _shiftAlertMessage_();
+    alert.should.have.string('Calle Falsa','Falta agregar la calle al alert')
+    alert.should.have.string('123','Falta agregar el número al alert')
+    alert.should.have.string('1','Falta agregar el departamento al alert')
+    alert.should.have.string('24072','Falta agregar el código postal al alert')
+    alert.should.have.string('Springfield','Falta agregar la ciudad al alert')
+    alert.should.have.string('EE. UU.','Falta agregar el país al alert')
+});
+
+it("si ingresamos Calle Wallaby, 42, 1, 1231, Sydney, Australia muestra La dirección que ha ingresado es: Calle Wallaby 42 1, 1231, Sydney, Australia", function() {
+  
+  _stubPromptResponse_('Calle Wallaby');
+  _stubPromptResponse_(42);
+  _stubPromptResponse_(1);
+  _stubPromptResponse_(1231);
+  _stubPromptResponse_('Sydney');
+  _stubPromptResponse_('Australia');
+  
+
+  _resetDocument_();
+
+  const alert = _shiftAlertMessage_();
+    alert.should.have.string('Calle Wallaby','Falta agregar la calle al alert')
+    alert.should.have.string('42','Falta agregar el número al alert')
+    alert.should.have.string('1','Falta agregar el departamento al alert')
+    alert.should.have.string('1231','Falta agregar el código postal al alert')
+    alert.should.have.string('Sydney','Falta agregar la ciudad al alert')
+    alert.should.have.string('Australia','Falta agregar el país al alert')
+
+});/*#tests>*/

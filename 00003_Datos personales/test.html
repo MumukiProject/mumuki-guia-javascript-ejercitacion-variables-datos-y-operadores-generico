@@ -1,0 +1,41 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+  _resetUserInteractions_();
+})
+
+it("si ingresamos Feli, Perez, 28, argentina y 11110000 muestra El nuevo perfil fue ingresado al sistema: nombre: Feli, apellido: Perez, edad: 28, nacionalidad: argentina, número de documento: 11110000", function() {
+  
+  _stubPromptResponse_('Feli');
+  _stubPromptResponse_('Perez');
+  _stubPromptResponse_(28)
+  _stubPromptResponse_('argentina')
+  _stubPromptResponse_(11110000)
+
+  _resetDocument_();
+
+ const alert = _shiftAlertMessage_();
+    alert.should.have.string('Feli','Falta agregar el nombre al alert')
+    alert.should.have.string('Perez','Falta agregar el apellido al alert')
+    alert.should.have.string('28','Falta agregar la edad al alert')
+    alert.should.have.string('argentina','Falta agregar la nacionalidad al alert')
+    alert.should.have.string('11110000','Falta agregar el número de documento al alert')
+});
+
+it("si ingresamos Ada, Lovelace, 168, inglesa y 000111 muestra El nuevo perfil fue ingresado al sistema: nombre: Ada, apellido: Lovelace, edad: 168, nacionalidad: inglesa, número de documento: 000111", function() {
+  
+  _stubPromptResponse_('Ada');
+  _stubPromptResponse_('Lovelace');
+  _stubPromptResponse_(168)
+  _stubPromptResponse_('inglesa')
+  _stubPromptResponse_('000111')
+
+  _resetDocument_();
+
+   const alert = _shiftAlertMessage_();
+    alert.should.have.string('Ada','Falta agregar el nombre al alert')
+    alert.should.have.string('Lovelace','Falta agregar el apellido al alert')
+    alert.should.have.string('168','Falta agregar la edad al alert')
+    alert.should.have.string('inglesa','Falta agregar la nacionalidad al alert')
+    alert.should.have.string('000111','Falta agregar el número de documento al alert')
+
+});/*#tests>*/

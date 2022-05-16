@@ -1,0 +1,38 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+  _resetUserInteractions_();
+})
+
+it("si ingresamos Ada, Alfonsina y el mar, Alma de diamante, Creo muestra Se ha creado la playlist Ada con las canciones Alfonsina y el mar, Alma de diamante, Creo", function() {
+  
+  _stubPromptResponse_('Ada');
+  _stubPromptResponse_('Alfonsina y el mar');
+  _stubPromptResponse_('Alma de diamante');
+  _stubPromptResponse_('Creo');
+  
+
+  _resetDocument_();
+
+ const alert = _shiftAlertMessage_();
+    alert.should.have.string('Ada','Falta agregar el nombre de la playlist al alert')
+    alert.should.have.string('Alfonsina y el mar','Falta agregar la primera canción al alert')
+    alert.should.have.string('Alma de diamante','Falta agregar la segunda canción al alert')
+    alert.should.have.string('Creo','Falta agregar la tercera canción al alert')
+});
+
+it("si ingresamos International, Elephant, Shine on you crazy diamond, No surprises muestra Se ha creado la playlist International con las canciones Elephant, Shine on you crazy diamond, No surprises", function() {
+  
+  _stubPromptResponse_('International');
+  _stubPromptResponse_('Elephant');
+  _stubPromptResponse_('Shine on you crazy diamond');
+  _stubPromptResponse_('No surprises');
+  
+
+  _resetDocument_();
+  
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('International','Falta agregar el nombre de la playlist al alert')
+    alert.should.have.string('Elephant','Falta agregar la primera canción al alert')
+    alert.should.have.string('Shine on you crazy diamond','Falta agregar la segunda canción al alert')
+    alert.should.have.string('No surprises','Falta agregar la tercera canción al alert')
+});/*#tests>*/

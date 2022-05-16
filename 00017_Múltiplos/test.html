@@ -1,0 +1,35 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 20 y 5, muestra El número 20 es múltiplo de 5: true", function() {
+
+_stubPromptResponse_(20)
+_stubPromptResponse_(5)
+
+
+_resetDocument_();
+
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('20','Falta agregar el primer número al alert');
+    alert.should.have.string('5','Falta agregar el segundo número al alert');
+    alert.should.have.string('true','Falta agregar el resultado al alert o el resultado es incorrecto');
+
+});
+
+it("si ingresamos 21 y 5, muestra El número 20 es múltiplo de 5: false", function() {
+
+_stubPromptResponse_(21);
+_stubPromptResponse_(5);
+
+
+_resetDocument_();
+
+
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('21','Falta agregar el primer número al alert');
+    alert.should.have.string('5','Falta agregar el segundo número al alert');
+    alert.should.have.string('false','Falta agregar el resultado al alert o el resultado es incorrecto');
+
+});/*#tests>*/

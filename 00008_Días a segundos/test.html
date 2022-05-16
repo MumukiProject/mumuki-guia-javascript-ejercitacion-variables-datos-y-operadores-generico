@@ -1,0 +1,30 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 2, muestra El resultado de la conversión de 2 días a segundos es: 172800", function() {
+
+_stubPromptResponse_(2);
+
+
+_resetDocument_();
+
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('2','Falta agregar el dias al alert')
+    alert.should.have.string('172800','Falta agregar el resultado al alert o el resultado es incorrecto')
+
+});
+
+it("si ingresamos 4, muestra El resultado de la conversión de 4 días a segundos es: 345600", function() {
+
+_stubPromptResponse_(4);
+
+
+_resetDocument_();
+
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('4','Falta agregar el dias al alert')
+    alert.should.have.string('345600','Falta agregar el resultado al alert o el resultado es incorrecto')
+
+});/*#tests>*/

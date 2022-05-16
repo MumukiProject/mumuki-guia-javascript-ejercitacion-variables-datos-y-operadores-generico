@@ -1,0 +1,43 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+  _resetUserInteractions_();
+})
+
+it("si ingresamos 2, 1, 3, 4, muestra El detalle de la compra es: mouse 2 x $ 400 $ 800, teclado 1 x $ 800 $ 800, auriculares 3 x $ 1500 $ 4500. El total es $ 6100 en 4 cuotas de $ 1525", function() {
+  
+  _stubPromptResponse_(2);
+  _stubPromptResponse_(1);
+  _stubPromptResponse_(3);
+  _stubPromptResponse_(4);
+  
+  _resetDocument_();
+
+  "Ingresá la cantidad de mouse que deseas comprar".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad del primer producto');
+  "Ingresá la cantidad de teclados que deseas comprar".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad del segundo producto');
+  "Ingresá la cantidad de auriculares que deseas comprar".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad del tercer producto');
+  "Ingresá la cantidad de cuotas".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad de cuotas');  
+  
+  
+'El detalle de la compra es: mouse 2 x $ 400 $ 800, teclado 1 x $ 800 $ 800, auriculares 3 x $ 1500 $ 4500. El total es $ 6100 en 4 cuotas de $ 1525'.should.eql(_shiftAlertMessage_())
+
+});
+
+it("si ingresamos 1, 1, 1, 3, muestra El detalle de la compra es: mouse 1 x $ 400 $ 400, teclado 1 x $ 800 $ 800, auriculares 1 x $ 1500 $ 1500. El total es $ 2700 en 3 cuotas de $ 900", function() {
+  
+  _stubPromptResponse_(1);
+  _stubPromptResponse_(1);
+  _stubPromptResponse_(1);
+  _stubPromptResponse_(3);
+  
+  _resetDocument_();
+
+  "Ingresá la cantidad de mouse que deseas comprar".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad del primer producto');
+  "Ingresá la cantidad de teclados que deseas comprar".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad del segundo producto');
+  "Ingresá la cantidad de auriculares que deseas comprar".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad del tercer producto');
+  "Ingresá la cantidad de cuotas".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad de cuotas');  
+  
+  
+'El detalle de la compra es: mouse 1 x $ 400 $ 400, teclado 1 x $ 800 $ 800, auriculares 1 x $ 1500 $ 1500. El total es $ 2700 en 3 cuotas de $ 900'.should.eql(_shiftAlertMessage_())
+
+});
+/*#tests>*/

@@ -1,0 +1,33 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 4 y 2 muestra El resultado del perímetro del rectángulo con base 4 y altura 2 es: 12 ", function() {
+
+_stubPromptResponse_(4);
+_stubPromptResponse_(2);
+
+_resetDocument_();
+
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('4','Falta agregar la base al alert')
+    alert.should.have.string('2','Falta agregar la altura al alert')
+    alert.should.have.string('12','Falta agregar el resultado al alert o el resultado es incorrecto')
+
+});
+
+it("si ingresamos 8 y 4 muestra El resultado del perímetro del rectángulo con base 8 y altura 4 es: 24", function() {
+
+_stubPromptResponse_(8);
+_stubPromptResponse_(4);
+
+
+_resetDocument_();
+
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('8','Falta agregar la base al alert')
+    alert.should.have.string('4','Falta agregar la altura al alert')
+    alert.should.have.string('24','Falta agregar el resultado al alert o el resultado es incorrecto')
+
+});/*#tests>*/

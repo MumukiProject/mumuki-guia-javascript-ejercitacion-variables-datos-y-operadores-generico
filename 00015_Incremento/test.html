@@ -1,0 +1,47 @@
+/*<output#*//*#output>*/
+/*<tests#*/beforeEach(() => {
+  _resetUserInteractions_();
+})
+
+it("si ingresamos 5 y 5, muestra 10, 15, 20, 25, 30", function() {
+  
+  _stubPromptResponse_(5);
+  _stubPromptResponse_(5);
+  
+
+  _resetDocument_();
+
+  // const primerAlert = _shiftAlertMessage_();
+  _shiftAlertMessage_().should.have.string('10','Falta agregar el resultado al alert o no es correcta el resultado generado');
+  
+  _shiftAlertMessage_().should.have.string('15','Falta agregar el resultado al alert o no es correcta el resultado generado');
+  
+  _shiftAlertMessage_().should.have.string('20','Falta agregar el resultado al alert o no es correcta el resultado generado');
+  
+  _shiftAlertMessage_().should.have.string('25','Falta agregar el resultado al alert o no es correcta el resultado generado');
+  
+  _shiftAlertMessage_().should.have.string('30','Falta agregar el resultado al alert o no es correcta el resultado generado');
+
+});
+
+it("si ingresamos 2 y 3, muestra 5, 8, 11, 14, 17", function() {
+  
+  _stubPromptResponse_(2);
+  _stubPromptResponse_(3);
+  
+
+  _resetDocument_();
+
+   _shiftAlertMessage_().should.have.string('5','Falta agregar el resultado al alert o no es correcta el resultado generado');
+  
+  _shiftAlertMessage_().should.have.string('8','Falta agregar el resultado al alert o no es correcta el resultado generado');
+  
+  _shiftAlertMessage_().should.have.string('11','Falta agregar el resultado al alert o no es correcta el resultado generado');
+  
+  _shiftAlertMessage_().should.have.string('14','Falta agregar el resultado al alert o no es correcta el resultado generado');
+  
+  _shiftAlertMessage_().should.have.string('17','Falta agregar el resultado al alert o no es correcta el resultado generado');
+
+});
+
+/*#tests>*/
