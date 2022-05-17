@@ -6,7 +6,7 @@ Necesitamos un programa que pida ingresar cuántas habitaciones tiene un hotel p
 
 Con esta información, el programa deberá mostrar el máximo de huéspedes que puede albergar mediante el mensaje : `El hotel tiene una capacidad de {resultado} personas`
 
-> Creá el programa que acabamos de describir.
+> <span class="mu-i18n es-ar">Creá</span><span class="mu-i18n es">Crea</span> el programa que acabamos de describir.
 
 <style>
   .mu-browser {

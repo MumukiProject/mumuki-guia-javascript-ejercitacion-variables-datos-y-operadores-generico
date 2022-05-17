@@ -2,28 +2,28 @@
 /*<tests#*/beforeEach(() => {
     _resetUserInteractions_();
   })
-  
-  it("si ingresamos Feli y Perez, muestra Hola Feli Perez, bienvenida a Ada", function() {
-    
+
+  it("si ingresamos Feli y Perez, muestra Hola Feli Perez, le damos la bienvenida", function() {
+
     _stubPromptResponse_('Feli');
     _stubPromptResponse_('Perez');
-    
+
     _resetDocument_();
     const alert = _shiftAlertMessage_();
     alert.should.have.string('Feli','Falta agregar el nombre al alert')
     alert.should.have.string('Perez','Falta agregar el apellido al alert')
   });
-  
-  it("si ingresamos Grace y Hopper, muestra Hola Grace Hopper, bienvenida a Ada", function() {
-    
+
+  it("si ingresamos Grace y Hopper, muestra Hola Grace Hopper, le damos la bienvenida", function() {
+
     _stubPromptResponse_('Grace');
     _stubPromptResponse_('Hopper');
-    
-  
+
+
     _resetDocument_();
     const alert = _shiftAlertMessage_();
     alert.should.have.string('Grace','Falta agregar el nombre al alert')
     alert.should.have.string('Hopper','Falta agregar el apellido al alert')
-  
-  
+
+
   });/*#tests>*/

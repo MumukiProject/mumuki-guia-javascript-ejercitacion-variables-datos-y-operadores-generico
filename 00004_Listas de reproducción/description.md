@@ -7,7 +7,7 @@ Nos pidieron un programa que permita ingresar el nombre de una playlist y el tí
 
 Con está información el programa deberá mostrar el siguiente mensaje: `Se ha creado la playlist {playlist} con las canciones {cancion1}, {cancion2}, {cancion3}`
 
-> Creá el programa que acabamos de describir.
+> <span class="mu-i18n es-ar">Creá</span><span class="mu-i18n es">Crea</span> el programa que acabamos de describir.
 
 <style>
   .mu-browser {

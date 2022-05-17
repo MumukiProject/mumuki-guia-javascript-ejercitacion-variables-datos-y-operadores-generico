@@ -3,8 +3,8 @@
   _resetUserInteractions_();
 })
 
-it("si ingresamos Feli, Perez, 28, argentina y 11110000 muestra El nuevo perfil fue ingresado al sistema: nombre: Feli, apellido: Perez, edad: 28, nacionalidad: argentina, número de documento: 11110000", function() {
-  
+it("si ingresamos Feli, Perez, 28, argentina y 11110000 muestra El nuevo perfil fue ingresado al sistema: nombre: Feli, apellido: Perez, edad: 28, nacionalidad: argentina, número de identificación personal: 11110000", function() {
+
   _stubPromptResponse_('Feli');
   _stubPromptResponse_('Perez');
   _stubPromptResponse_(28)
@@ -18,11 +18,11 @@ it("si ingresamos Feli, Perez, 28, argentina y 11110000 muestra El nuevo perfil 
     alert.should.have.string('Perez','Falta agregar el apellido al alert')
     alert.should.have.string('28','Falta agregar la edad al alert')
     alert.should.have.string('argentina','Falta agregar la nacionalidad al alert')
-    alert.should.have.string('11110000','Falta agregar el número de documento al alert')
+    alert.should.have.string('11110000','Falta agregar el número de identificación personal al alert')
 });
 
-it("si ingresamos Ada, Lovelace, 168, inglesa y 000111 muestra El nuevo perfil fue ingresado al sistema: nombre: Ada, apellido: Lovelace, edad: 168, nacionalidad: inglesa, número de documento: 000111", function() {
-  
+it("si ingresamos Ada, Lovelace, 168, inglesa y 000111 muestra El nuevo perfil fue ingresado al sistema: nombre: Ada, apellido: Lovelace, edad: 168, nacionalidad: inglesa, número de identificación personal: 000111", function() {
+
   _stubPromptResponse_('Ada');
   _stubPromptResponse_('Lovelace');
   _stubPromptResponse_(168)
@@ -36,6 +36,6 @@ it("si ingresamos Ada, Lovelace, 168, inglesa y 000111 muestra El nuevo perfil f
     alert.should.have.string('Lovelace','Falta agregar el apellido al alert')
     alert.should.have.string('168','Falta agregar la edad al alert')
     alert.should.have.string('inglesa','Falta agregar la nacionalidad al alert')
-    alert.should.have.string('000111','Falta agregar el número de documento al alert')
+    alert.should.have.string('000111','Falta agregar el número de identificación personal al alert')
 
 });/*#tests>*/

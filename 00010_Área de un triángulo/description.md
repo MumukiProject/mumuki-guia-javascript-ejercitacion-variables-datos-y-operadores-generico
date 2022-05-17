@@ -2,11 +2,11 @@ Necesitamos un programa que pida ingresar el valor de la base y el valor de la a
 
 1. `Ingresá el valor de la base del triángulo`
 1. `Ingresá el valor de la altura del triángulo`
- 
+
 
 Con esta información, el programa deberá mostrar el resultado del área del triángulo  mediante el siguiente mensaje: `El resultado del área del triángulo con base {base} y altura {altura} es: {resultado}`
 
-> Creá el programa que acabamos de describir.
+> <span class="mu-i18n es-ar">Creá</span><span class="mu-i18n es">Crea</span> el programa que acabamos de describir.
 
 <style>
   .mu-browser {
