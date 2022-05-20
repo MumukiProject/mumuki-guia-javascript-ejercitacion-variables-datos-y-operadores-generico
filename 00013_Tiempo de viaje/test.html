@@ -3,7 +3,7 @@
 _resetUserInteractions_();
 })
 
-it("si ingresamos 5 muestra `Para la distancia 5 km en bicicleta el tiempo de viaje es 0.5 hora/s, a pie 1 hora/s y en auto 0.1 hora/s` ", function() {
+it("si ingresamos 5 muestra 'Para la distancia 5 km en bicicleta el tiempo de viaje es 0.5 hora/s, a pie 1 hora/s y en auto 0.1 hora/s' ", function() {
 
 _stubPromptResponse_(5);
 
@@ -15,7 +15,7 @@ const alert = _shiftAlertMessage_();
     alert.should.have.string('0.1','Falta agregar el resultado a auto al alert o el resultado es incorrecto');
 });
 
-it("si ingresamos 150 muestra `Para la distancia 150 km en bicicleta el tiempo de viaje es 15 hora/s, a pie 30 hora/s y en auto 3 hora/s`", function() {
+it("si ingresamos 150 muestra 'Para la distancia 150 km en bicicleta el tiempo de viaje es 15 hora/s, a pie 30 hora/s y en auto 3 hora/s'", function() {
 
 _stubPromptResponse_(150);
 
