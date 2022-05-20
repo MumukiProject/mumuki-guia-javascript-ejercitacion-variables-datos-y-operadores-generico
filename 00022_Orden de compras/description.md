@@ -12,7 +12,9 @@ Tenemos que:
 * El teclado $800.
 * Los auriculares $1500.
  
-Con esta información, el programa deberá mostrar un mensaje con el detalle y el valor total la compra, cantidad de cuotas y valor de cada una de las cuotas con el mensaje: 'El detalle de la compra es: mouse {cantidadDeMouse} x $ 400 $ {precioTotalDeMouse}, teclado {cantidadDeTeclados} x $ 800 $ {precioTotalDeTeclados}, auriculares {cantidadAuriculares} x $ 1500 $ {precioTotalAuriculares}. El total es $ {precioTotal} en {cuotas} cuotas de $ {precioPorCuota}'.
+Con esta información, el programa deberá mostrar un mensaje con el detalle y el valor total la compra, cantidad de cuotas y valor de cada una de las cuotas con el mensaje: 
+
+'El detalle de la compra es: mouse {cantidadDeMouse} x $ 400 $ {precioTotalDeMouse}, teclado {cantidadDeTeclados} x $ 800 $ {precioTotalDeTeclados}, auriculares {cantidadAuriculares} x $ 1500 $ {precioTotalAuriculares}. El total es $ {precioTotal} en {cuotas} cuotas de $ {precioPorCuota}'.
 
 <style>
   .mu-browser {
