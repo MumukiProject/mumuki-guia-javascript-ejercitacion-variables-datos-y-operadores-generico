@@ -7,6 +7,7 @@ Necesitamos un programa que pida ingresar la orden de compra de un local, para e
   
   
 Tenemos que:
+
 * Un mouse sale $400.
 * El teclado $800.
 * Los auriculares $1500.
